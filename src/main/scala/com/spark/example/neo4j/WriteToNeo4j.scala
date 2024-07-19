@@ -34,7 +34,7 @@ object WriteToNeo4j {
     spark
       .read
       .option("header", true)
-      .option("inferScheme", true)
+      .option("inferSchema", true)
       .csv("data/neo4j/stocks.csv")
       .as[Stock]
   }
