@@ -15,7 +15,7 @@ libraryDependencies += "org.neo4j" %% "neo4j-connector-apache-spark" % "5.3.1_fo
 libraryDependencies += "org.apache.spark" %% "spark-streaming-kafka-0-10" % "3.5.1" % "provided"
 libraryDependencies += "org.apache.spark" %% "spark-sql-kafka-0-10" % "3.5.1" % "provided"
 
-assemblyMergeStrategy / assembly := {
+assemblyMergeStrategy in assembly := {
   case PathList("META-INF", xs @ _*) => MergeStrategy.discard
   case x => MergeStrategy.first
 }
